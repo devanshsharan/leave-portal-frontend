@@ -1,0 +1,138 @@
+.leaves-section {
+    padding: 20px;
+  }
+  
+  .leave-cards {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin-left: 25px;
+    margin-right: 25px;
+    gap: 3%;
+  }
+  
+  .leave-card {
+    width: 35%;
+    background-color: #f8f8f8;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(20, 15, 15, 0.1);
+  }
+  
+  .leave-card h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .leave-inside{
+    width: 100%;
+  }
+  .leave-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 8%;
+  }
+  
+  .leave-box {
+    color: black;
+    padding: 5%;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+  }
+  .leave-box1{
+    background-color: #E6E6FA;
+  }
+  .leave-box2{
+    background-color: #FDF5E6;
+  }
+  
+  .box-content {
+    font-size: 24px;
+    
+  }
+  
+  .box-label {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .leave-history {
+    margin-top: 40px;
+  }
+  
+  .history-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .history-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .history-card p {
+    margin: 0;
+  }
+  
+.btn-floating {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    border-radius: 50% ;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.btn-floating:hover {
+    background-color: #0056b3;
+}
+
+.modal.show {
+    display: block;
+}
+@media (max-width: 768px) {
+  .leave-cards {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      flex-direction: column; 
+      align-items: flex-start; 
+  }
+  .leave-card {
+    width: 93%;
+    margin-bottom: 25px;
+  }
+  .leaves-section {
+    padding: 0px;
+  }
+}
+@media (max-width: 425px) {
+  .leave-card {
+    width: 87%;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 320px) {
+  .leave-card {
+    width: 84%;
+    margin-bottom: 25px;
+  }
+}

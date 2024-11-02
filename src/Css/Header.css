@@ -1,0 +1,110 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+    align-items: center;
+    padding: 10px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.beehyvLogo {
+    width: 85%;
+    margin-bottom: 5%;
+  }
+  
+.for-bell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative; 
+}
+
+.notification-icon-wrapper {
+    position: relative; 
+    cursor: pointer;
+}
+
+.bell-icon {
+    font-size: 1 rem; 
+    color: inherit;
+    cursor: pointer;
+    transform: scale(1.5); 
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+}
+
+.bell-icon:hover {
+    transform: scale(1.6); 
+}
+
+.notification-badge {
+    position: absolute;
+    top: -10px; 
+    right: -5px; 
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.notification-dropdown {
+    position: absolute;
+    top: 50px; 
+    right: 0; 
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-height: 300px; 
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 10px;
+    
+}
+
+.notification-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.notification-dropdown li:last-child {
+    border-bottom: none;
+}
+.clear-button {
+    padding: 5px 10px; 
+    background-color: rgb(255, 0, 0); 
+    color: white; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; 
+    font-weight: bold; 
+    margin-left: 70%;
+}
+
+.clear-button:hover {
+    background-color: #c9302c; 
+}
+.final-touch{
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header img {
+      display: none;
+    }
+  }

@@ -1,0 +1,321 @@
+.history-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  
+  .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+  }
+  
+  .leaveType {
+    font-weight: bold;
+    font-size: 1.2em;
+    
+  }
+  
+  .row11 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: 6%;
+    
+  }
+  .status-boxi{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .status-size{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .status-boxi1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-box {
+    display: flex;
+    gap: 8px;
+  }
+  
+  
+  .button-box1 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  .button2 {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    width: 240px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .button3{
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    width: 120px;
+  }
+  .button1{
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    width: 150px;
+  }
+  .button5{
+    width: 120px;
+  }
+  .input-box {
+    margin-top: 10px;
+    width: 248px; 
+    padding: 5px; 
+    margin-bottom: 12px;
+    border-radius: 6px; 
+    border: 1px solid #ccc;
+    font-size: 16px; 
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .input-box:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    outline: none; 
+  }
+  .input-box:hover {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    background-color: #f9f9f9; 
+  }
+  .input-box:disabled {
+    border-color: #ccc; 
+    background-color: #f0f0f0; 
+}
+
+.input-box:disabled:hover {
+    border-color: #ccc; 
+    box-shadow: none; 
+}
+  .btn-outline-primary {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .btn-secondary:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .response-section {
+    margin: 16px 0;
+    padding: 16px;
+  }
+  
+  .response-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .leaveReason, .response-card > div {
+    margin-right: 16px; 
+  }
+  
+  .date-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+  }
+  
+  .date {
+    font-size: 1em;
+    color: #6c757d;
+  }
+  .big-bulkha{
+    margin-top: 25px;
+  }
+  .boxi1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .boxi2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    margin-top: 33px;
+    padding-right: 5%;
+  }
+  .boxi3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8%;
+  }
+  .boxi5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxi4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxic{
+    width: 350px;
+  }
+  .boxi-status{
+    width: 120px;
+    display: flex;
+    justify-content: center;
+  }
+  .boxi-name{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  .leave-heading{
+    margin-left: 9%;
+    color: green;
+  }
+  .approval-heading{
+    color: #007bff;;
+  }
+  .project-heading{
+    color: #6A0DAD;
+  }
+  .boxi-leavereason-box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+   
+  .arrow-icon1 {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    margin-right: 8%;
+  }
+
+  @media (max-width: 1440px) {
+    .arrow-icon1 {
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #007bff;
+      display: flex;
+      justify-content: center;
+      margin-top: 2%;
+      margin-right: 13%;
+    }
+  } 
+  
+  @media (max-width: 1024px) {
+    .button2 {
+      width: 200px;
+    }
+    .button-box1{
+      margin-top: 10%;
+      margin-left: 25%;;
+    }
+    .button5{
+      width: 50%;
+    }
+    .arrow-icon1{
+      margin-left: -3%;
+    }
+    .input-box{
+      margin-left: 29%;
+      width: 75%;
+    }
+    .button-box{
+      margin-left: 30%;
+    }
+  }
+  @media (max-width: 768px) {
+    .boxi-final{
+      display: none;
+    }
+    .arrow-icon1{
+      margin-left: 13%;
+    }
+  }
+  @media (max-width: 425px) {
+    .boxi1{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .button-box1{
+      margin-top: 10%;
+      margin-left: 8%;;
+    }
+    .arrow-icon1{
+      margin-left: 10%;
+    }
+    .input-box{
+      margin-left: 15%;
+      width: 75%;
+    }
+    .button-box{
+      margin-left: 15%;
+    }
+    .button5{
+      width: 42%;
+    }
+
+  }
+  @media (max-width: 375px) {
+    .boxi1{
+      margin-left: -7%;
+    }
+
+  }
+  @media (max-width: 320px) {
+    .boxi1{
+      margin-left: -20%;
+    }
+
+  }
