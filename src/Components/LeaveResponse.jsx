@@ -3,6 +3,7 @@ import ResponseCard from "../RightContent/ResponseCard";
 import Pagination from "../RightContent/Pagination";
 import "../Css/LeaveResponse.css";
 import { useSelector, useDispatch } from "react-redux";
+import SkeletonLoader1 from "../RightContent/SkeletonLoader1";
 import {
   selectCurrentEmployeeId,
   selectCurrentToken,
@@ -104,7 +105,12 @@ function LeaveResponse() {
   }, [offset, pageSize, managerId, flag2, searchQuery, statusFilter]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    // Show skeleton loader when loading
+    return (
+      <div className="skeleton-container">
+        <SkeletonLoader1 />
+      </div>
+    );
   }
 
   if (error) {

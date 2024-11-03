@@ -9,6 +9,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false); // New state for loader
   const [showGuestOptions, setShowGuestOptions] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -30,6 +31,8 @@ function Login() {
       alert("Both fields are required");
       return;
     }
+
+    setLoading(true); // Set loading to true when login starts
 
     const encryptedPassword = CryptoJS.AES.encrypt(
       password,
@@ -76,6 +79,8 @@ function Login() {
     } catch (err) {
       setError(err.message);
       alert(err.message);
+    } finally {
+      setLoading(false); // Set loading to false when login is complete
     }
   };
 
@@ -120,13 +125,15 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-
-        <button type="submit">Login</button>
+        <button className="button-hell" type="submit" disabled={loading}>
+          {loading ? "Logging in..." : "Login"}
+        </button>{" "}
+        {/* Display "Logging in..." when loading */}
         {error && <div className="error">{error}</div>}
         <div className="guest">
           <button
             type="button"
-            className="guest-login-btn"
+            className="guest-login-btn button-hell"
             onClick={() => setShowGuestOptions(!showGuestOptions)}
           >
             {showGuestOptions ? "Close" : "Login as Guest"}
@@ -136,21 +143,21 @@ function Login() {
             <div>
               <button
                 type="button"
-                className="guest-option-btn"
+                className="guest-option-btn button-hell"
                 onClick={() => handleGuestLogin("admin")}
               >
                 Guest as Admin
               </button>
               <button
                 type="button"
-                className="guest-option-btn"
+                className="guest-option-btn button-hell"
                 onClick={() => handleGuestLogin("manager")}
               >
                 Guest as Manager
               </button>
               <button
                 type="button"
-                className="guest-option-btn"
+                className="guest-option-btn button-hell"
                 onClick={() => handleGuestLogin("employee")}
               >
                 Guest as Employee

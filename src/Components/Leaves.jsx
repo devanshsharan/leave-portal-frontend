@@ -4,6 +4,7 @@ import LeaveCard from "../RightContent/LeaveCard";
 import Pagination from "../RightContent/Pagination";
 import LeaveForm from "../RightContent/LeaveForm";
 import { useSelector, useDispatch } from "react-redux";
+import SkeletonLoader from "../RightContent/SkeletonLoader";
 import {
   selectCurrentEmployeeId,
   selectCurrentToken,
@@ -146,7 +147,12 @@ function Leaves() {
   };
 
   if (loading) {
-    return <p>Loading...</p>;
+    // Show skeleton loader when loading
+    return (
+      <div className="skeleton-container">
+        <SkeletonLoader />
+      </div>
+    );
   }
 
   return (

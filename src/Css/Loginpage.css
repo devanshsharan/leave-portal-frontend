@@ -6,33 +6,42 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #e9ecef;
     padding: 20px;
   }
   
   form {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     width: 100%;
     max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  form:hover {
+    transform: translateY(-3px); /* Subtle hover effect for the form */
   }
   
   label {
     display: block;
     font-size: 1rem;
-    color: #333;
+    color: #495057;
     margin-bottom: 5px;
   }
   
-  .login-input{
+  .login-input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+  }
+  .login-input:focus {
+    border-color: #007bff; /* Highlight input on focus */
+    outline: none;
   }
   
   button {
@@ -49,6 +58,27 @@
   button:hover {
     background-color: #0056b3;
   }
+  .button-hell {
+    background-color: #ff6f61;
+    color: #ffffff;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button-hell:disabled {
+    background-color: #f8b7b3; /* Lighter color for disabled state */
+    cursor: not-allowed;
+  }
+  
+  .button-hell:hover:not(:disabled) {
+    background-color: #e63946;
+    transform: scale(1.02); /* Slight scaling effect on hover */
+  }
   
   .error {
     color: #ff0000;
@@ -63,46 +93,38 @@
   }
   
   .guest-login-btn {
-    background-color: #007bff;
-    color: white;
+    background-color: #0077b6; /* Changed to teal */
+    color: #ffffff;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 16px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .guest-login-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .guest-options {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    background-color: #023e8a; /* Darker teal on hover */
+    transform: scale(1.02);
   }
   
   .guest-option-btn {
     display: block;
     width: 100%;
-    background-color: #808080;
-    color: white;
+    background-color: #8ac926; /* Changed to yellow */
+    color: #000000;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 12px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .guest-option-btn:hover {
-    background-color: #696969;
+    background-color: #6a9e13; /* Darker yellow on hover */
+    transform: scale(1.02);
   }
