@@ -11,6 +11,7 @@ function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false); // New state for loader
   const [showGuestOptions, setShowGuestOptions] = useState(false);
+  const [showLoadingMessage, setShowLoadingMessage] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const jwt = useSelector(selectCurrentToken);
@@ -33,6 +34,11 @@ function Login() {
     }
 
     setLoading(true); // Set loading to true when login starts
+    setShowLoadingMessage(false);
+
+    const timer = setTimeout(() => {
+      setShowLoadingMessage(true);
+    }, 8000);
 
     const encryptedPassword = CryptoJS.AES.encrypt(
       password,
@@ -166,6 +172,12 @@ function Login() {
           )}
         </div>
       </form>
+      {showLoadingMessage && (
+        <p className="info-message">
+          This may take a moment. If issues persist, please reload and try
+          again.
+        </p>
+      )}
     </div>
   );
 }

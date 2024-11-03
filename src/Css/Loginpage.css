@@ -128,3 +128,25 @@
     background-color: #6a9e13; /* Darker yellow on hover */
     transform: scale(1.02);
   }
+
+  .info-message {
+    margin: 15px 0;
+    padding: 15px;
+    /* Light background color */
+    color: #0056b3; /* Text color */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .info-message {
+        font-size: 0.9rem;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+  
