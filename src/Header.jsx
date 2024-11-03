@@ -30,27 +30,19 @@ function Header() {
   const fetchWithInterceptor = useFetchInterceptor();
 
   const handleLogout = async () => {
-    try {
-      const response = await fetch(
-        "https://leave-portal-backend-1.onrender.com/deleteCookie",
-        {
-          method: "POST",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+    dispatch(logOut());
+    navigate("/");
 
-      if (response.ok) {
-        dispatch(logOut());
-        navigate("/");
-      }
-    } catch (error) {
-      console.log("Logout error:", error);
-      dispatch(logOut());
-      navigate("/");
-    }
+    fetch("https://leave-portal-backend-1.onrender.com/deleteCookie", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).catch((error) => {
+      console.log("Logout request error:", error);
+      // You can handle further error logging or actions here if needed
+    });
   };
 
   const loadNotifications = async () => {
